@@ -40,6 +40,36 @@ The customer wants to play book a table at a restaurant.
 
 ### Wireframes
 
+#### Menu
+
+![Menu Desktop View](media/wireframes/menu-desk.png)
+![Menu Mobile View](media/wireframes/menu-mob.png)
+
+#### Registration
+
+![Registration Desktop View](media/wireframes/registration-desk.png)
+![Registration Mobile View](media/wireframes/registration-mob.png)
+
+#### Login
+
+![Login Desktop View](media/wireframes/login-desk.png)
+![Login Mobile View](media/wireframes/login-mob.png)
+
+#### Booking
+
+![Booking Desktop View](media/wireframes/reservation-desk.png)
+![Booking Mobile View](media/wireframes/reservation-mob.png)
+
+#### My Account
+
+![]()
+![]()
+
+#### Edit Booking
+
+![]()
+![]()
+
 
 ## Features
 
@@ -94,7 +124,7 @@ The customer wants to play book a table at a restaurant.
 
 ## Testing
 
-To view all testing documentation please refer to [TESTING.md](TESTING.md)
+<!-- To view all testing documentation please refer to [TESTING.md](TESTING.md) -->
 
 ### Deployment
 
