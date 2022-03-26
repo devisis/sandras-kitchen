@@ -15,12 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from reservation.views import get_index, get_booking_form
-
+from reservation import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', get_index, name='get_index'),
-    path('booking/', get_booking_form, name='get_booking_form'),
+    path('', views.get_index, name='get_index'),
+    path('booking/', views.get_booking_form, name='get_booking_form'),
     path('accounts/', include('allauth.urls')),
 
 ]

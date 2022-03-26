@@ -4,8 +4,8 @@ from django.shortcuts import render
 
 
 def get_index(request):
-    return render(request, 'reservation/index.html')
+    return render(request, 'index.html')
 
 
 def get_booking_form(request):
-    return render(request, 'reservation/booking.html')
+    return render(request, 'booking.html')
