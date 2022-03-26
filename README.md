@@ -42,23 +42,23 @@ The customer wants to play book a table at a restaurant.
 
 #### Menu
 
-![Menu Desktop View](media/wireframes/menu-desk.png)
-![Menu Mobile View](media/wireframes/menu-mob.png)
+![Menu Desktop View](documentation/wireframes/menu-desk.png)
+![Menu Mobile View](documentation/wireframes/menu-mob.png)
 
 #### Registration
 
-![Registration Desktop View](media/wireframes/registration-desk.png)
-![Registration Mobile View](media/wireframes/registration-mob.png)
+![Registration Desktop View](documentation/wireframes/registration-desk.png)
+![Registration Mobile View](documentation/wireframes/registration-mob.png)
 
 #### Login
 
-![Login Desktop View](media/wireframes/login-desk.png)
-![Login Mobile View](media/wireframes/login-mob.png)
+![Login Desktop View](documentation/wireframes/login-desk.png)
+![Login Mobile View](documentation/wireframes/login-mob.png)
 
 #### Booking
 
-![Booking Desktop View](media/wireframes/reservation-desk.png)
-![Booking Mobile View](media/wireframes/reservation-mob.png)
+![Booking Desktop View](documentation/wireframes/reservation-desk.png)
+![Booking Mobile View](documentation/wireframes/reservation-mob.png)
 
 #### My Account
 
