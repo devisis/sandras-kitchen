@@ -25,7 +25,7 @@ class Booking(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     date = models.DateField()
     time = models.TimeField()
-    date_booked = models.DateTimeField()
+    date_booked = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return str(self.id)
