@@ -1,4 +1,39 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<section class="container-fluid">
+    <div class="container">
+        <div class="row justify-content-md-center">
+          <h3 class="m-4" > Request a Booking </h3>
+            <form action="" method="POST">
+              {% csrf_token %}
+                <div class="form-group mt-1">
+                  <label for="exampleInputPassword1">Party Size</label>
+                  <select class="form-control form-control-sm" name="pickPartySize" aria-describedby="partySize">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                  <small>maximum of 5 per party</small>
+                </div>
+                <div class="form-group mt-1">
+                  <label for="pickDate">Date</label>
+                  <input type="date" class="form-control" id="pickDate" name="pickDate" aria-describedby="pickDate">
+                  <small>click calender to pick a date</small>
+                </div>
+                <div class="form-group mt-1">
+                  <label for="pickTime">Time</label>
+                  <input type="time" class="form-control" id="pickTime" name="pickTime" aria-describedby="pickTime">
+                  <small>click clock to pick a time</small>
+                </div>
+                <br>
+                <button type="submit" value="Post" class="btn btn-primary mb-4">Request Reservation</button>
+              </form>
+        </div>
+    </div>
+</section>
+
+
 {% endblock %}
