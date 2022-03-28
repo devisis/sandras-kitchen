@@ -30,16 +30,6 @@ The customer wants to play book a table at a restaurant.
 
 - Provide attractive site for customer booking.
 
-### Colour Scheme
-
-
-
-### Typography
-
-
-
-### Wireframes
-
 #### Menu
 
 ![Menu Desktop View](documentation/wireframes/menu-desk.png)
@@ -60,55 +50,6 @@ The customer wants to play book a table at a restaurant.
 ![Booking Desktop View](documentation/wireframes/reservation-desk.png)
 ![Booking Mobile View](documentation/wireframes/reservation-mob.png)
 
-#### My Account
-
-![]()
-![]()
-
-#### Edit Booking
-
-![]()
-![]()
-
-
-## Features
-
-### Existing Features
-
-#### 
-
-![]()
-
-#### 
-
-![]()
-
-#### 
-
-![]()
-
-#### 
-
-![]()
-
-#### 
-
-![]()
-
-#### 
-
-![]()
-
-#### 
-
-![]()
-
-### Features Left to Implement
-
--
--
--
--
 
 ## Technologies Used
 
@@ -116,7 +57,7 @@ The customer wants to play book a table at a restaurant.
 - [GitHub]() was used for securely storing code.
 - [Gitpod](https://gitpod.io/) is the cloud based IDE.
 - Python3 is used for the main code logic.
-- [Django]()
+- [Django](https://www.djangoproject.com/) was used as the framework
 - PostgreSQL
 - 
 - [Heroku](https://heroku.com/) was used for live deployment.
@@ -160,8 +101,16 @@ Additionally, Heroku will require a `Procfile`, so you can type:
 
 - `echo web: node index.js > Procfile`
 
-## Credits
-
 ### Acknowledgements
 
 - Thank you to my mentor for help and support.
+
+### Detrimental Problems
+
+During my attempt to finish off this project I had a hard time fixing a series of issues and things seemed to spiral out of control.
+I had a issue with my migrations which halted my progress as my Models were not updating and django didnt seem to pick up and new additions to the model when migrating. I searched google and came across a few options tried them all and none seemed to work. Finally I came across the method in the screeshot bellow and I guess rather stupidly I followed the instructions blindly which resulted in all my folders and files being deleted.
+
+At this point it was 10am and I had 2 hours left to try and salvage what I could so I bit down and used last night's repo to try and start again however after installing the files from my requirements.txt I instantly came across an error and im rather disheartened as this now means that all the hours and sleepless nights of studying after a long evenings of work have been wasted.
+
+![Migration fix attempt](documentation/issues/file-wipe.png)
+![Failure to restart from past repo](documentation/issues/final-issue.png)
