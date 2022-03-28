@@ -136,8 +136,8 @@ The steps are as follows:
 - From the Dashboard click "New" then "Create New App".
 - Enter a project name (unique), select a region then press "Create app".
 - This will create an app and open the deploy tab. From here select the "Settings" tab.
-- Head to "Buildpacks" and select "Add Buildpack" from here select Python and Node.js and select save (make sure the order is python first then node.js).
-- Scroll up and head to the "Deploy" section to choose deployment method. Select "GitHub" and in the "connect to GitHub" section link your GitHub account.
+- Set your Environment Variables by navigating to Reveal Config Vars.
+Scroll up and head to the "Deploy" section to choose deployment method. Select "GitHub" and in the "connect to GitHub" section link your GitHub account.
 - Scroll down to the manual deploy option and select "Deploy Branch".
 - The app will now be built. Once completed a 'Your App Was Successfully Deployed' message and a link will appear.
 
@@ -145,11 +145,11 @@ The steps are as follows:
 
 To make a local copy of this project, you can clone it by typing the following in your IDE terminal:
 
-- `git clone https://github.com/devisis/battleships.git`
+- `git clone https://github.com/devisis/sandras-kitchen.git`
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/devisis/mamas-kitchen)
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/devisis/sandras-kitchen)
 
 Once your project is ready for coding, you must download the required dependencies from the requirements.txt file. You can type:
 
