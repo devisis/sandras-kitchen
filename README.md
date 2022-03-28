@@ -128,7 +128,7 @@ The customer wants to play book a table at a restaurant.
 
 ### Deployment
 
-The site was deployed using [Heroku](https://heroku.com/). The app can be found using this link - [Mama's Kitchen](https://devisis-battleships.herokuapp.com/).
+The site was deployed using [Heroku](https://heroku.com/). The app can be found using this link - [Mama's Kitchen](https://sandras-kitchen.herokuapp.com/).
 
 The steps are as follows:
 
