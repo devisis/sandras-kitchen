@@ -20,7 +20,7 @@ class Table(models.Model):
         return str(self.id)
 
 
-class Booking(models.Model):
+class Reservation(models.Model):
     table = models.ForeignKey(Table, on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE)
     date = models.DateField()
