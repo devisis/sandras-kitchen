@@ -1,16 +1,20 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.urls import path
-import requests
-# from .models import Customer,Table,Booking 
+from .forms import ReservationForm
 
 
 def reservation(request):
-    # context = {}
-    return render(request, 'reservation.html')
+    if request.method == 'POST':
+        form = ReservationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'home/index.html')
+        else:
+            return render(request, 'reservation.html', {'form': form})
+            # redirect('home/index.html')
 
-
-def request_reservation(request):
-    if request.method == "POST":
-        pickPartySize
-        pickDate
-        pickTime
+    form = ReservationForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'reservation.html', context)
