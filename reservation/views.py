@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.urls import path
 from .forms import ReservationForm
+from.models import Reservation
+from django.views.generic import ListView
 
 
 def reservation(request):
@@ -18,3 +20,7 @@ def reservation(request):
         'form': form
     }
     return render(request, 'reservation.html', context)
+
+
+class EditReservations(ListView):
+    model = Reservation
