@@ -6,7 +6,7 @@
   <div class="container">
     <div class="row justify-content-md-center">
       <h3 class="m-4"> Request a Booking </h3>
-      <form action="{% url 'reservation_create' %}" method="POST" class="reservation-form">
+      <form method="POST" class="reservation-form">
         {% csrf_token %}
         {{ form|crispy }}
         <!-- <div class="form-group mt-1">

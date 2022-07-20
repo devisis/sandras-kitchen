@@ -1,56 +1,48 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.urls import path
+from django.urls import path, reverse_lazy
+from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import ReservationForm
-from.models import Reservation
+from .models import Reservation
 
 
-@login_required
-def reservation_create(request):
-    if request.method == 'POST':
-        form = ReservationForm(data=request.POST)
-        if form.is_valid():
-            form.save()
-            return render(request, 'reservation_details')
+class AddReservationView(CreateView):
 
-    form = ReservationForm()
-    context = {
-        'form': form
-    }
-    return render(request, 'reservation_create.html', context)
+    model = Reservation
+    form_class = ReservationForm
+    template_name = 'reservation_create.html'
+    success_url = '/reservation/details/'
 
-
-@login_required
-def reservation_details(request):
-    # form = Reservation.objects.filter(user=request.user)
-    form = Reservation.objects.all()
-    context = {
-        'form': form
-    }
-    return render(request, 'reservation_details.html', context)
+    # set reservation user to current logged in user
+    def post(self, request):
+        form = ReservationForm(request.POST)
+        res = form.save(commit=False)
+        res.user = request.user
+        res.save()
+        return redirect('reservation_details')
 
 
-@login_required
-def reservation_edit(request, res_id):
-    reservation = get_object_or_404(Reservation, id=res_id)
-    if request.method == 'POST':
-        form = ReservationForm(request.POST, instance=reservation)
-        if form.is_valid():
-            resveration.objects.user = request.user
-            form.save()
-            return redirect('reservation_details')
+class ReservationListView(ListView):
 
-    form = ReservationForm(instance=reservation)
-    context = {
-        'form': form
-    }
-    return render(request, 'reservation_edit.html', context)
+    model = Reservation
+    template_name = 'reservation_details.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
 
 
-@login_required
-def reservation_delete(request, res_id):
-    reservation = get_object_or_404(Reservation, id=res_id)
-    reservation.delete()
+class ReservationUpdateView(UpdateView):
 
-    return redirect('reservation_details')
+    model = Reservation
+    form_class = ReservationForm
+    template_name = 'reservation_edit.html'
+    success_url = '/reservation/details/'
+
+
+class ReservationDeleteView(DeleteView):
+
+    model = Reservation
+    success_url = reverse_lazy('reservation_details')

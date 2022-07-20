@@ -11,7 +11,7 @@
   </div>
   <div class="row">
     <div class="col d-flex justify-content-center flex-wrap">
-      {% for res in form %}
+      {% for res in object_list %}
       <div class="card m-2 col-m-2" style="width: 12em;">
         <div class="card-body">
 
@@ -20,8 +20,8 @@
           <p class="card-text">seats: {{ res.seats }}</p>
           <p class="card-text">date: {{ res.date }}</p>
           <p class="card-text">time: {{ res.time }}</p>
-          <a href="/reservation/edit/{{ res.id }}" class="btn btn-primary">edit</a>
-          <a href="{% url 'reservation_delete' res.id %}" class="btn btn-primary">delete</a>
+          <a href="/reservation/edit/{{ res.pk }}" class="btn btn-primary">edit</a>
+          <a href="{% url 'reservation_delete' res.pk %} " class="btn btn-primary">delete</a>
         </div>
       </div>
       {%  endfor %}
