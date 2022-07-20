@@ -1,10 +1,10 @@
 from django.db import models
 from django.contrib.auth.models import User
-# Create your models here.
 
 
 class Menu(models.Model):
 
+    # defining menu types
     MENU_TYPE = (
         ('Starter', 'starter'),
         ('Main', 'main'),
