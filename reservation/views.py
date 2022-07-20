@@ -8,6 +8,7 @@ from .forms import ReservationForm
 from .models import Reservation
 
 
+# Create form data instances
 class AddReservationView(CreateView):
 
     model = Reservation
@@ -15,7 +16,7 @@ class AddReservationView(CreateView):
     template_name = 'reservation_create.html'
     success_url = '/reservation/details/'
 
-    # set reservation user to current logged in user
+    # Set reservation user to current logged in user
     def post(self, request):
         form = ReservationForm(request.POST)
         res = form.save(commit=False)
@@ -24,16 +25,24 @@ class AddReservationView(CreateView):
         return redirect('reservation_details')
 
 
+# Display a list of all reservations
 class ReservationListView(ListView):
 
     model = Reservation
     template_name = 'reservation_details.html'
 
+    # Get object data and return it
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        if self.request.user.is_superuser:
+            context['current'] = Reservation.objects.all()
+        else:
+            context['current'] = Reservation.objects.filter(user=self.request.user)
         return context
 
 
+
+# Update selected reservation
 class ReservationUpdateView(UpdateView):
 
     model = Reservation
@@ -42,6 +51,7 @@ class ReservationUpdateView(UpdateView):
     success_url = '/reservation/details/'
 
 
+# Delete selected reservation
 class ReservationDeleteView(DeleteView):
 
     model = Reservation

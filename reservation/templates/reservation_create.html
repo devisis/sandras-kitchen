@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 {% load crispy_forms_tags %}
+<!-- Form for creating a reservation  -->
 <section class="container-fluid">
   <div class="container">
     <div class="row justify-content-md-center">
@@ -9,27 +10,6 @@
       <form method="POST" class="reservation-form">
         {% csrf_token %}
         {{ form|crispy }}
-        <!-- <div class="form-group mt-1">
-                  <label for="exampleInputPassword1">Party Size</label>
-                  <select class="form-control form-control-sm" name="pickPartySize" aria-describedby="partySize">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                  </select>
-                  <small>maximum of 5 per party</small>
-                </div>
-                <div class="form-group mt-1">
-                  <label for="pickDate">Date</label>
-                  <input type="date" class="form-control" id="pickDate" name="pickDate" aria-describedby="pickDate" min="2022-07-08" max="2023-07-08">
-                  <small>click calender to pick a date</small>
-                </div>
-                <div class="form-group mt-1">
-                  <label for="pickTime">Time</label>
-                  <input type="time" class="form-control" id="pickTime" name="pickTime" aria-describedby="pickTime" min="10:00" max="18:00">
-                  <small>click clock to pick a time</small>
-                </div> -->
         <br>
         <button type="submit" value="Post" class="btn btn-primary mb-4">Request Reservation</button>
       </form>

@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-
+<!-- Show a list of reservation details -->
 <div class="container-fluid text-center">
   <div class="row">
     <div class="col-12">
@@ -11,7 +11,7 @@
   </div>
   <div class="row">
     <div class="col d-flex justify-content-center flex-wrap">
-      {% for res in object_list %}
+      {% for res in current %}
       <div class="card m-2 col-m-2" style="width: 12em;">
         <div class="card-body">
 
@@ -20,7 +20,9 @@
           <p class="card-text">seats: {{ res.seats }}</p>
           <p class="card-text">date: {{ res.date }}</p>
           <p class="card-text">time: {{ res.time }}</p>
+          <!-- select and edit reservation via use of primary key -->
           <a href="/reservation/edit/{{ res.pk }}" class="btn btn-primary">edit</a>
+          <!-- select and delete reservation via use of primary key -->
           <a href="{% url 'reservation_delete' res.pk %} " class="btn btn-primary">delete</a>
         </div>
       </div>
