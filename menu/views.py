@@ -1,7 +1,15 @@
 from django.shortcuts import render
+from django.http import HttpResponse
+from django.views.generic.list import ListView
+from .models import Menu
 
 
-def menu(request):
+class MenuView(ListView):
     """ View to get menu """
 
-    return render(request, 'menu/menu.html')
+    model = Menu
+    template_name = 'menu.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context

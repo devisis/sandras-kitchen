@@ -10,10 +10,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="col d-flex justify-content-center">
-    {% if user.is_superuser %}
+    <div class="col d-flex justify-content-center flex-wrap">
       {% for res in form %}
-      <div class="card m-2" style="width:400px">
+      <div class="card m-2 col-m-2" style="width: 12em;">
         <div class="card-body">
 
           <p class="card-text">username: {{ res.user }}</p>
@@ -26,7 +25,6 @@
         </div>
       </div>
       {%  endfor %}
-    {% endif %}
     </div>
   </div>
  
