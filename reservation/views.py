@@ -9,6 +9,7 @@ from .models import Reservation
 
 
 # Create form data instances
+
 class AddReservationView(CreateView):
 
     model = Reservation
@@ -39,7 +40,6 @@ class ReservationListView(ListView):
         else:
             context['current'] = Reservation.objects.filter(user=self.request.user)
         return context
-
 
 
 # Update selected reservation

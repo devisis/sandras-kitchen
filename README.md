@@ -104,13 +104,3 @@ Additionally, Heroku will require a `Procfile`, so you can type:
 ### Acknowledgements
 
 - Thank you to my mentor for help and support.
-
-### Detrimental Problems
-
-During my attempt to finish my milestone project 4 I had a hard time fixing a series of issues and things spiraled out of control.
-I had a issue with my migrations which halted my progress as my Models were not updating and django didn't seem to pick up and new additions to the model when migrating. I searched google and came across a few options tried them all and none seemed to work. Finally I came across the method in the screenshot bellow and I guess rather stupidly I followed the instructions blindly which resulted in all my folders and files being deleted.
-
-At this point it was 10am and I had 2 hours left to try and salvage what I could so I bit down and used last night's repo to try and start again however after installing the files from my requirements.txt I instantly came across a error that seems rather complicated to fix. I'm rather disheartened and struggling to keep my mind together as this now means that all the hours and sleepless nights of studying after a long evenings of work have been wasted. 
-
-![Migration fix attempt](documentation/issues/file-wipe.png)
-![Failure to restart from past repo](documentation/issues/final-issue.png)
