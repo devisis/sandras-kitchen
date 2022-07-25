@@ -2,13 +2,19 @@
 from django.forms import ModelForm
 from django import forms
 from .models import Reservation
-from datetime import datetime, timedelta
-
-today = datetime.today()
-strtoday = str(today)[:10]
+import datetime
+from django.core.exceptions import ValidationError
 
 
 class ReservationForm(ModelForm):
+
+    # compare user input with current date and raise error if in past or current
+    def clean_date(self):
+        date = self.cleaned_data['date']
+        if date <= datetime.date.today():
+            raise ValidationError(message='Date cannot be in the past or today')
+        return date
+
     class Meta:
         model = Reservation
         fields = ['name', 'seats', 'date', 'time']
@@ -32,18 +38,15 @@ class ReservationForm(ModelForm):
             ),
         }
 
-    # def clean(self):
-    #     super(ReservationForm, self).clean()
-
-    #     seats = self.cleaned_data.get('seats')
-
-    #     if seats <= 0:
-    #         self.errors['seats'] = self.error_class(['Pick a number of seats between 1 and 5'])
-
-    #     return self.cleaned_data
-
 
 class EditReservations(forms.ModelForm):
+    # compare user input with current date and raise error if in past or current
+    def clean_date(self):
+        date = self.cleaned_data['date']
+        if date <= datetime.date.today():
+            raise ValidationError(message='Date cannot be in the past')
+        return date
+
     class Meta:
         model = Reservation
         fields = ['name', 'seats', 'date', 'time']

@@ -17,13 +17,11 @@ class AddReservationView(CreateView):
     template_name = 'reservation_create.html'
     success_url = '/reservation/details/'
 
-    # Set reservation user to current logged in user
-    def post(self, request):
-        form = ReservationForm(request.POST)
-        res = form.save(commit=False)
-        res.user = request.user
-        res.save()
-        return redirect('reservation_details')
+    # Set reservation user to current logged in user and ensure form is valid before save
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        self.object = form.save()
+        return super().form_valid(form)
 
 
 # Display a list of all reservations

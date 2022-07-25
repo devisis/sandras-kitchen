@@ -8,6 +8,7 @@
 
     </div>
     <div class="row">
+        <!-- for each food item in the database create a card with the food image and food title -->
         {% for food in object_list %}
         <div class="col d-flex justify-content-center flex-wrap mt-4 text-center">
             <div class="card" style="width: 18rem;">
@@ -15,7 +16,6 @@
                 <div class="card-body">
 
                     <p class="card-title">{{ food.name }}</p>
-                    <p class="card-text">{{ food.description }}</p>
                 </div>
             </div>
         </div>
