@@ -2,8 +2,7 @@
 
 ## Introduction
 
-Sandra's Kitchen is a restaurant booking website aimed at providing a secure place for customers to make and manage bookings for Sandra's Kitchen.
-
+Sandra's Kitchen is a restaurant booking website aimed at providing a secure place for customers to make and manage bookings.
 # UX
 
 ## External User Goal
