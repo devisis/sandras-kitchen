@@ -3,11 +3,16 @@
 ## Introduction
 
 Sandra's Kitchen is a restaurant booking website aimed at providing a secure place for customers to make and manage bookings.
+
 # UX
+
+## Strategy 
+
+I used an agile methodology when planning the project via the use of projects and issues. The latter used to create user stories which formed the main guide when building the project.
 
 ## External User Goal
 
-The customer wants to play book a table at a restaurant.
+The customer wants to book a table at a restaurant.
 
 ## User Stories
 
@@ -29,6 +34,8 @@ The customer wants to play book a table at a restaurant.
 
 - Provide attractive site for customer booking.
 
+## Wireframes 
+
 #### Menu
 
 ![Menu Desktop View](documentation/wireframes/menu-desk.png)
@@ -49,6 +56,22 @@ The customer wants to play book a table at a restaurant.
 ![Booking Desktop View](documentation/wireframes/reservation-desk.png)
 ![Booking Mobile View](documentation/wireframes/reservation-mob.png)
 
+## Features
+
+### Login Page
+![Login Page]()
+
+### Registration Page
+![Registration Page]()
+
+### Gallery of Menu
+![Gallery of Menu]()
+
+### Menu Page with title and details
+![Menu Page]()
+
+### Booking page
+![Booking Page]()
 
 ## Technologies Used
 
@@ -64,7 +87,7 @@ The customer wants to play book a table at a restaurant.
 
 ## Testing
 
-<!-- To view all testing documentation please refer to [TESTING.md](TESTING.md) -->
+To view all testing documentation please refer to [TESTING.md](TESTING.md)
 
 ### Deployment
 
