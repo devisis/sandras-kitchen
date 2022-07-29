@@ -44,12 +44,37 @@
       {% include 'includes/main-nav.html' %}
     </nav>
   </header>
+  {% if messages %}
+  <section id="alerts">
+      {% for msg in messages %}
+          <!-- all django message tags mirror bootstrap, except error/danger -->
+          <aside class="alert {% if msg.tags == 'error' %}alert-danger{% else %}alert-{{ msg.tags }}{% endif %} text-center" role="alert">
+              <h3>{{ msg }}</h3>
+          </aside>
+      {% endfor %}
+  </section>
+  {% endif %}
 
   {% block content %}
   {% endblock %}
 
-  <footer class="container-fluid bg-primary">
-    <h4>footer</h4>
+  <footer class=" container-fluid text-white bg-dark text-muted fixed-bottom px-4 width-100">
+    <div class="row py-3">
+      <div class="col-4">
+        <h6 class="uppercase">Useful Links:</h6>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item"><a href="{% url 'index' %}">Home</a></li>
+          <li class="list-group-item"><a href="{% url 'menu' %}">Menu</a></li>
+        </ul>
+      </div>
+      <div class="col">
+        <h6 class="uppercase">Contact Us:</h6>
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item">Contact Number: 01234567891</li>
+          <li class="list-group-item">Contact Email: sandraskitchen@gmail.com</li>
+        </ul>
+      </div>
+    </div>
   </footer>
 </body>
 

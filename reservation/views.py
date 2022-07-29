@@ -6,16 +6,18 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import ReservationForm
 from .models import Reservation
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 # Create form data instances
 
-class AddReservationView(CreateView):
+class AddReservationView(SuccessMessageMixin, CreateView):
 
     model = Reservation
     form_class = ReservationForm
     template_name = 'reservation_create.html'
     success_url = '/reservation/details/'
+    success_message = 'Reservation created!'
 
     # Set reservation user to current logged in user and ensure form is valid before save
     def form_valid(self, form):
@@ -41,16 +43,17 @@ class ReservationListView(ListView):
 
 
 # Update selected reservation
-class ReservationUpdateView(UpdateView):
+class ReservationUpdateView(SuccessMessageMixin, UpdateView):
 
     model = Reservation
     form_class = ReservationForm
     template_name = 'reservation_edit.html'
     success_url = '/reservation/details/'
+    success_message = 'Reservation updated!'
 
 
 # Delete selected reservation
-class ReservationDeleteView(DeleteView):
+class ReservationDeleteView(SuccessMessageMixin, DeleteView):
 
     model = Reservation
     success_url = reverse_lazy('reservation_details')
