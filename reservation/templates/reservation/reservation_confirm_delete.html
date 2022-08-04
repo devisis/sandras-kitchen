@@ -10,10 +10,10 @@
             <hr>
         </div>
     </div>
-    <div class="row">
+    <div class="row text-center">
         <form method="post">{% csrf_token %}
             <p>Are you sure you want to delete the reservation for "{{ object.name }}"?</p>
-            <div class="d-flex flex-row">
+            <div class="d-flex flex-row justify-content-center">
                 <input type="submit" value="Confirm"  class="btn btn-danger mb-4">
                 <!-- cancel deletion and redirect to reservations list  -->
                 <a href="{% url 'reservation_details' %}" class="btn btn-primary">Cancel</a>

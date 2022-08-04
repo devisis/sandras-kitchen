@@ -11,10 +11,10 @@
   </div>
   <div class="row">
     <div class="col d-flex justify-content-center flex-wrap">
-      {% if res in current %}
+      {% if current %}
       {% for res in current %}
       <!-- for each reservation in list of users confirmed reservations print this card with the users details -->
-      <div class="card m-2 col-m-2" style="width: 12em;">
+      <div class="card m-2 col-m-2 bg-dark" style="width: 12em;">
         <div class="card-body">
 
           <p class="card-text">username: {{ res.user }}</p>
