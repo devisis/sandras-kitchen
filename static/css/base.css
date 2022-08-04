@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Great+Vibes&display=swap');
+
+body{
+    background-color: #000000;
+    background-image: linear-gradient( #000000 0%, #052236 74%);
+    color: white;
+    font-family: 'Dosis', sans-serif;
+}
+
+#mainNavbar {
+    background-color: #000407;
+}
+
+.navbar-brand, .footer-brand, h1, h3{
+    font-family: 'Great Vibes', cursive;
+}
+
+h1, h3 {
+    color: whitesmoke;
+}
+
+.home-card {
+    background-color: #000407;
+    color: whitesmoke;
+}
+
+.res-details{
+    background-color: #000407;
+    min-height: 90vh;
+}
+
+footer {
+    padding: 5em 0;
+    background-color: #052236;
+    background-image: linear-gradient(#052236 0%, #000000 10%);
+    margin-top: auto;
+    bottom: 0;
+    display: flex;
+    flex-flow:row wrap;
+}

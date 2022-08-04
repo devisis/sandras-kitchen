@@ -10,6 +10,8 @@
 {% block corecss %}
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
   integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
 {% endblock %}
 
 {% block extracss %}
@@ -30,13 +32,14 @@
 
 <head>
 
-  <title>Menu</title>
+  <title>Sandra's Kitchen</title>
 </head>
 
 <body>
   <header class="container-fluid w-100 p-0">
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-      <a class="navbar-brand" href="{% url 'index' %}">Sandra's Kitchen</a>
+    <nav class="navbar navbar-expand-md navbar-dark" id="mainNavbar">
+      <a class="navbar-brand  p-0 mx-4" href="{% url 'index' %}"> S K
+      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navMenu"
         aria-expanded="false" aria-label="Menu navigation toggle">
         <span class="navbar-toggler-icon"></span>
@@ -49,7 +52,7 @@
       {% for msg in messages %}
           <!-- all django message tags mirror bootstrap, except error/danger -->
           <aside class="alert {% if msg.tags == 'error' %}alert-danger{% else %}alert-{{ msg.tags }}{% endif %} text-center" role="alert">
-              <h3>{{ msg }}</h3>
+              <h4>{{ msg }}</h4>
           </aside>
       {% endfor %}
   </section>
@@ -58,23 +61,24 @@
   {% block content %}
   {% endblock %}
 
-  <footer class=" container-fluid text-white bg-dark text-muted fixed-bottom px-4 width-100">
-    <div class="row py-3">
-      <div class="col-4">
+  <footer class="container-fluid px-4 width-100">
+    <div class="col-5">
         <h6 class="uppercase">Useful Links:</h6>
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item"><a href="{% url 'index' %}">Home</a></li>
-          <li class="list-group-item"><a href="{% url 'menu' %}">Menu</a></li>
+        <ul>
+          <li class="footer-list"><a href="{% url 'index' %}">Home</a></li>
+          <li class="footer-list"><a href="{% url 'menu' %}">Menu</a></li>
         </ul>
       </div>
-      <div class="col">
+      <div class="col-5">
         <h6 class="uppercase">Contact Us:</h6>
-        <ul class="list-group list-group-horizontal">
-          <li class="list-group-item">Contact Number: 01234567891</li>
-          <li class="list-group-item">Contact Email: sandraskitchen@gmail.com</li>
+        <ul>
+          <li class="footer-list">Contact Number: 01234567891</li>
+          <li class="footer-list">Contact Email: sandraskitchen@gmail.com</li>
         </ul>
-      </div>
     </div>
+    <div class="col-2">
+      <h4 class="footer-brand mt-4"> S K </h4>
+    </div>  
   </footer>
 </body>
 

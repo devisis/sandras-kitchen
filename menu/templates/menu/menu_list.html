@@ -4,51 +4,60 @@
 {% block content %}
 <section class="container-fluid">
     <div class="row text-center">
-        <h3 class="mt-4 p-4">Our Menu</h3>
+        <h1 class="mt-4 p-4">Our Menu</h1>
         <hr>
     </div>
 
     <div class="row text-center">
         <!-- search through menu object and display data that conforms to filters provided  -->
         <div class="col">
-            <h5>Sides</h5>
+            <h3>Starters</h3>
             <hr>
-            <div class="row m-2">
+            <div class="row m-2 d-flex justify-content-center flex-wrap text-center">
             {% for food in object_list %}
                 {% if food.type == 'Starter' %}
-                <strong>{{ food.name }} </strong>
-                <p>{{ food.description }}</p>
+                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                    <div class="card-header">{{ food.name }}</div>
+                    <div class="card-body">
+                      <p class="card-text">{{ food.description }}</p>
+                    </div>
+                </div>
                 {% endif %}
-                {% endfor %}
-                <hr>
+            {% endfor %}
             </div>
         </div>
 
         <div class="col">
-            <h5>Mains</h5>
+            <h3>Mains</h3>
             <hr>
-            <div class="row m-2">
+            <div class="row m-2 col d-flex justify-content-center flex-wrap text-center">
             {% for food in object_list %}
-            {% if food.type == 'Main' %}
-                <strong>{{ food.name }} </strong>
-                <p>{{ food.description }}</p>
+                {% if food.type == 'Main' %}
+                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                    <div class="card-header">{{ food.name }}</div>
+                    <div class="card-body">
+                      <p class="card-text">{{ food.description }}</p>
+                    </div>
+                </div>
                 {% endif %}
-                {% endfor %}
-                <hr>
+            {% endfor %}
             </div>
         </div>
 
         <div class="col">
-            <h5>Dessert</h5>
+            <h3>Dessert</h3>
             <hr>
-            <div class="row m-2">
+            <div class="row m-2 col d-flex justify-content-center flex-wrap text-center">
             {% for food in object_list %}
-            {% if food.type == 'Dessert' %}
-                <strong>{{ food.name }} </strong>
-                <p>{{ food.description }}</p>
+                {% if food.type == 'Dessert' %}
+                <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+                    <div class="card-header">{{ food.name }}</div>
+                    <div class="card-body">
+                      <p class="card-text">{{ food.description }}</p>
+                    </div>
+                </div>
                 {% endif %}
-                {% endfor %}
-                <hr>
+            {% endfor %}
             </div>
         </div>
 

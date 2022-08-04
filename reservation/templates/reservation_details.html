@@ -2,17 +2,18 @@
 {% load static %}
 {% block content %}
 <!-- Show a list of reservation details -->
-<div class="container-fluid text-center">
+<section class="container-fluid text-center res-details">
   <div class="row">
     <div class="col-12">
-      <h2>My Reservations</h2>
+      <h1>My Reservations</h1>
       <hr>
     </div>
   </div>
   <div class="row">
     <div class="col d-flex justify-content-center flex-wrap">
-      <!-- for each reservation in list of users confirmed reservations print this card with the users details -->
+      {% if res in current %}
       {% for res in current %}
+      <!-- for each reservation in list of users confirmed reservations print this card with the users details -->
       <div class="card m-2 col-m-2" style="width: 12em;">
         <div class="card-body">
 
@@ -28,7 +29,14 @@
         </div>
       </div>
       {%  endfor %}
+      {% else %}
+      <div class="card text-center res-details">
+        <div class="card-body">
+          <h2 class="card-title p-4"> You have no current reservations</h2>
+          <a href="{% url 'reservation' %}" class="btn btn-primary">Make a reservation</a>
+        </div>
+      {% endif %}
     </div>
-  </div>
+  </section>
  
   {% endblock %}
