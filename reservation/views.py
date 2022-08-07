@@ -6,6 +6,8 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import ReservationForm
 from .models import Reservation
+from django.forms import ModelForm
+from django import forms
 from django.contrib.messages.views import SuccessMessageMixin
 
 
@@ -15,9 +17,12 @@ class AddReservationView(SuccessMessageMixin, CreateView):
 
     model = Reservation
     form_class = ReservationForm
-    template_name = 'reservation_create.html'
-    success_url = '/reservation/details/'
+    template_name = 'reservation_create_form.html'
+    success_url = '/reservation/list/'
     success_message = 'Reservation created!'
+
+    def get_context_data(self):
+        context = super().get_context_data(**kwargs)
 
     # Set reservation user to current logged in user and ensure form is valid before save
     def form_valid(self, form):
@@ -30,7 +35,7 @@ class AddReservationView(SuccessMessageMixin, CreateView):
 class ReservationListView(ListView):
 
     model = Reservation
-    template_name = 'reservation_details.html'
+    template_name = 'reservation_list.html'
 
     # Get object data and return it
     def get_context_data(self, **kwargs):
@@ -47,8 +52,8 @@ class ReservationUpdateView(SuccessMessageMixin, UpdateView):
 
     model = Reservation
     form_class = ReservationForm
-    template_name = 'reservation_edit.html'
-    success_url = '/reservation/details/'
+    template_name = 'reservation_update.html'
+    success_url = '/reservation/list/'
     success_message = 'Reservation updated!'
 
 
@@ -56,4 +61,4 @@ class ReservationUpdateView(SuccessMessageMixin, UpdateView):
 class ReservationDeleteView(SuccessMessageMixin, DeleteView):
 
     model = Reservation
-    success_url = reverse_lazy('reservation_details')
+    success_url = reverse_lazy('reservation_list')
