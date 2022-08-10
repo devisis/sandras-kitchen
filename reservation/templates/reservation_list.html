@@ -23,7 +23,7 @@
           <p class="card-text">date: {{ res.date }}</p>
           <p class="card-text">time: {{ res.time }}</p>
           <!-- select and edit reservation via use of primary key -->
-          <a href="/reservation/edit/{{ res.pk }}" class="btn btn-primary">edit</a>
+          <a href="/reservation/update/{{ res.pk }}" class="btn btn-primary">update</a>
           <!-- select and delete reservation via use of primary key -->
           <a href="{% url 'reservation_delete' res.pk %} " class="btn btn-primary">delete</a>
         </div>
