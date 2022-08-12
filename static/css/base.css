@@ -1,3 +1,5 @@
+/* General Styling */
+
 @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Great+Vibes&display=swap');
 
 body{
@@ -7,6 +9,12 @@ body{
     font-family: 'Dosis', sans-serif;
 }
 
+h1, h3 {
+    color: whitesmoke;
+}
+
+/* Navbar */
+
 #mainNavbar {
     background-color: #000407;
 }
@@ -15,19 +23,23 @@ body{
     font-family: 'Great Vibes', cursive;
 }
 
-h1, h3 {
-    color: whitesmoke;
-}
+
+/* Home Page */
 
 .home-card {
     background-color: #000407;
     color: whitesmoke;
 }
 
+/* Reservation Styling */
+
 .res-details{
     background-color: #000407;
     min-height: 90vh;
 }
+
+
+/* Footer */
 
 footer {
     padding: 5em 0;
@@ -37,4 +49,8 @@ footer {
     bottom: 0;
     display: flex;
     flex-flow:row wrap;
+}
+
+footer ul {
+    list-style-type: none;
 }

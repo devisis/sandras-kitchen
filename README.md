@@ -10,6 +10,10 @@ Sandra's Kitchen is a restaurant booking website aimed at providing a secure pla
 
 I used an agile methodology when planning the project via the use of projects and issues. The latter used to create user stories which formed the main guide when building the project.
 
+As I am supplying a webapp for a food company I decided to use dark colours to makeup the background. I decided upon a gradient as I found it gave the background subtle character and allowed the images and forms to pop. The dark gradient brings the content to life and makes it the main attraction.
+
+CRUD functionality is everything when it comes to this webapp as user interaction is paramount. The user creates a booking then the webapp provides feedback and allows the user to read all the bookings they have made. The user has the option to update the booking details and if they do so choose, delete any bookings.
+
 ## External User Goal
 
 The customer wants to book a table at a restaurant.
