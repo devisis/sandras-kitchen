@@ -7,6 +7,7 @@ body{
     background-image: linear-gradient( #000000 0%, #052236 74%);
     color: white;
     font-family: 'Dosis', sans-serif;
+    min-height: 100vh;
 }
 
 h1, h3 {
@@ -42,13 +43,14 @@ h1, h3 {
 /* Footer */
 
 footer {
-    padding: 5em 0;
+    padding: 2em 0;
     background-color: #052236;
     background-image: linear-gradient(#052236 0%, #000000 10%);
     margin-top: auto;
     bottom: 0;
     display: flex;
     flex-flow:row wrap;
+    position: absolute;
 }
 
 footer ul {
