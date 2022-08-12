@@ -2,16 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dosis&family=Great+Vibes&display=swap');
 
-html {
-    height: 100%;
-}
-
 body{
     background-color: #000000;
     background-image: linear-gradient( #000000 0%, #052236 74%);
     color: white;
     font-family: 'Dosis', sans-serif;
-    min-height: 100%;
+    position: relative;
+    min-height: 100vh;
 }
 
 h1, h3 {
@@ -55,7 +52,8 @@ footer {
     bottom: 0;
     display: flex;
     flex-flow:row wrap;
-    min-height: 120px;
+    height: 2.5rem;
+    position: relative;
 }
 
 footer ul {
