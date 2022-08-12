@@ -7,7 +7,7 @@ if os.path.isfile('env.py'):
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
-DEBUG = os.environ.get('DEBUG')
+# DEBUG = os.environ.get('DEBUG')
 DEBUG = False
 ALLOWED_HOSTS = ['sandras-kitchen.herokuapp.com', 'localhost']
 
