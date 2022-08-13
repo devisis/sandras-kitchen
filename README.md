@@ -63,19 +63,25 @@ The customer wants to book a table at a restaurant.
 ## Features
 
 ### Login Page
-![Login Page]()
+![Login Page](documentation/features/log_in.png)
 
 ### Registration Page
-![Registration Page]()
+![Registration Page](documentation/features/registration_page.png)
 
 ### Gallery of Menu
-![Gallery of Menu]()
+![Gallery of Menu](documentation/features/home_page_gallery.png)
 
 ### Menu Page with title and details
-![Menu Page]()
+![Menu Page](documentation/features/menu_page.png)
 
 ### Booking page
-![Booking Page]()
+![Booking Page](documentation/features/reservation_page.png)
+
+### Delete booking page
+![Booking Page](documentation/features/delete_confirmation.png)
+
+### Update booking page
+![Booking Page](documentation/features/update_reservation.png)
 
 ## Technologies Used
 
