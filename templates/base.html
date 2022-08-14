@@ -31,7 +31,6 @@
 {% endblock %}
 
 <head>
-
   <title>Sandra's Kitchen</title>
 </head>
 
@@ -49,12 +48,13 @@
   </header>
   {% if messages %}
   <section id="alerts">
-      {% for msg in messages %}
-          <!-- all django message tags mirror bootstrap, except error/danger -->
-          <aside class="alert {% if msg.tags == 'error' %}alert-danger{% else %}alert-{{ msg.tags }}{% endif %} text-center" role="alert">
-              <h4>{{ msg }}</h4>
-          </aside>
-      {% endfor %}
+    {% for msg in messages %}
+    <!-- all django message tags mirror bootstrap, except error/danger -->
+    <aside class="alert {% if msg.tags == 'error' %}alert-danger{% else %}alert-{{ msg.tags }}{% endif %} text-center"
+      role="alert">
+      <h4>{{ msg }}</h4>
+    </aside>
+    {% endfor %}
   </section>
   {% endif %}
 
@@ -63,22 +63,22 @@
 
   <footer class="container-fluid px-4 width-100">
     <div class="col-5">
-        <h6 class="uppercase">Useful Links:</h6>
-        <ul>
-          <li class="footer-list"><a href="{% url 'index' %}">Home</a></li>
-          <li class="footer-list"><a href="{% url 'menu' %}">Menu</a></li>
-        </ul>
-      </div>
-      <div class="col-5">
-        <h6 class="uppercase">Contact Us:</h6>
-        <ul>
-          <li class="footer-list">Contact Number: 01234567891</li>
-          <li class="footer-list">Contact Email: sandraskitchen@gmail.com</li>
-        </ul>
+      <h6 class="uppercase">Useful Links:</h6>
+      <ul>
+        <li class="footer-list"><a href="{% url 'index' %}">Home</a></li>
+        <li class="footer-list"><a href="{% url 'menu' %}">Menu</a></li>
+      </ul>
+    </div>
+    <div class="col-5">
+      <h6 class="uppercase">Contact Us:</h6>
+      <ul>
+        <li class="footer-list">Contact Number: 01234567891</li>
+        <li class="footer-list">Contact Email: sandraskitchen@gmail.com</li>
+      </ul>
     </div>
     <div class="col-2">
       <h4 class="footer-brand mt-4"> S K </h4>
-    </div>  
+    </div>
   </footer>
 </body>
 

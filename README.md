@@ -14,6 +14,8 @@ As I am supplying a webapp for a food company I decided to use dark colours to m
 
 CRUD functionality is everything when it comes to this webapp as user interaction is paramount. The user creates a booking then the webapp provides feedback and allows the user to read all the bookings they have made. The user has the option to update the booking details and if they do so choose, delete any bookings.
 
+The webapp tries its best to elimnate user error with the implementation of validation. The user is unable to make two reservations for the same day which in turn elimnates the ability to duplicate bookings. The user is also forced to stick to constraints when selecting a time and date. 
+
 ## External User Goal
 
 The customer wants to book a table at a restaurant.
@@ -74,13 +76,16 @@ The customer wants to book a table at a restaurant.
 ### Menu Page with title and details
 ![Menu Page](documentation/features/menu_page.png)
 
-### Booking page
+### Make Reservation page
 ![Booking Page](documentation/features/reservation_page.png)
 
-### Delete booking page
+### Manage Reservation page
+![Booking Page](documentation/features/manage_reservations_user.png)
+
+### Delete Reservation page
 ![Booking Page](documentation/features/delete_confirmation.png)
 
-### Update booking page
+### Update Reservation page
 ![Booking Page](documentation/features/update_reservation.png)
 
 ## Technologies Used
