@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-<section class="container-fluid">
+<section class="container-fluid menu">
     <div class="row text-center">
         <h1 class="mt-4 p-4">Our Menu</h1>
         <hr>
@@ -13,6 +13,7 @@
         <div class="col">
             <h3>Starters</h3>
             <hr>
+            <!-- fill out starter cards -->
             <div class="row m-2 d-flex justify-content-center flex-wrap text-center">
                 {% for food in object_list %}
                 {% if food.type == 'Starter' %}
@@ -27,9 +28,10 @@
             </div>
         </div>
 
-        <div class="col">
+        <div class="col mains">
             <h3>Mains</h3>
             <hr>
+            <!-- fill out mains cards -->
             <div class="row m-2 col d-flex justify-content-center flex-wrap text-center">
                 {% for food in object_list %}
                 {% if food.type == 'Main' %}
@@ -44,9 +46,10 @@
             </div>
         </div>
 
-        <div class="col">
+        <div class="col dessert">
             <h3>Dessert</h3>
             <hr>
+            <!-- fill out dessert cards -->
             <div class="row m-2 col d-flex justify-content-center flex-wrap text-center">
                 {% for food in object_list %}
                 {% if food.type == 'Dessert' %}
