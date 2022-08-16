@@ -54,7 +54,6 @@ class EditReservations(forms.ModelForm):
                 format=('%Y-%m-%d'),
                 attrs={
                     'class': 'form-control',
-                    'placeholder': 'Select a date',
                     'type': 'date',
                     }
             ),
@@ -62,7 +61,6 @@ class EditReservations(forms.ModelForm):
                 format=('%H:%M'),
                 attrs={
                     'class': 'form-control',
-                    'placeholder': 'Select a time',
                     'type': 'time',
                     }
 

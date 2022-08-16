@@ -40,6 +40,12 @@ The customer wants to book a table at a restaurant.
 
 - Provide attractive site for customer booking.
 
+
+# Structure 
+
+## Database 
+
+![Entity Relation Diagram]()
 ## Wireframes 
 
 #### Menu
@@ -61,6 +67,9 @@ The customer wants to book a table at a restaurant.
 
 ![Booking Desktop View](documentation/wireframes/reservation-desk.png)
 ![Booking Mobile View](documentation/wireframes/reservation-mob.png)
+
+## Color Scheme
+
 
 ## Features
 
@@ -91,14 +100,16 @@ The customer wants to book a table at a restaurant.
 ## Technologies Used
 
 - Git used for version control.
-- [GitHub]() was used for securely storing code.
+- [GitHub](https://github.com/) was used for securely storing code.
 - [Gitpod](https://gitpod.io/) is the cloud based IDE.
 - Python3 is used for the main code logic.
 - [Django](https://www.djangoproject.com/) was used as the framework
-- PostgreSQL
-- 
+- PostgreSQL was used for storing data.
+- [Cloudinary](https://cloudinary.com/) was used for storing static files.
 - [Heroku](https://heroku.com/) was used for live deployment.
 - [ShareX](https://getsharex.com/) for capturing screenshots.
+- [Bootstrap](https://getbootstrap.com/) for  website design and responsiveness.
+- [Font Awesome](https://fontawesome.com/) for the icons.
 
 ## Testing
 
