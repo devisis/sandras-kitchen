@@ -43,7 +43,7 @@ The customer wants to book a table at a restaurant.
 
 ## Database 
 
-![Entity Relation Diagram]()
+![Entity Relation Diagram](documentation/wireframes/erd.png)
 
 ## Wireframes 
 
