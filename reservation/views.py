@@ -1,17 +1,10 @@
-from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from django.contrib.auth.decorators import login_required
-from django.http import HttpResponseRedirect
-from django.urls import path, reverse_lazy
+from django.urls import reverse_lazy
 from django.views.generic.list import ListView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .forms import ReservationForm
 from .models import Reservation
-from django.forms import ModelForm
-from django import forms
 from django.contrib.messages.views import SuccessMessageMixin
-from django.core.exceptions import ValidationError
-
 from django.contrib.auth.models import User
 
 
