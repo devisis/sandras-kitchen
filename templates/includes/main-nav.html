@@ -1,40 +1,35 @@
 <header class="container-fluid w-100 p-0">
   <!-- Sandra's kitchen main navbar -->
   <nav class="navbar navbar-expand-md navbar-dark" id="mainNavbar">
-    <a class="navbar-brand  p-0 mx-4" href="{% url 'index' %}"> S K
-    </a>
+    <a class="navbar-brand  p-0 mx-4" href="{% url 'index' %}"> S K </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navMenu"
       aria-expanded="false" aria-label="Menu navigation toggle">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div class="main-nav collapse navbar-collapse d-lg-flex justify-content-end px-5" id="navMenu">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'index' %}">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'menu' %}">Menu</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'menu' %}">Menu</a></li>
 
         {% if user.is_authenticated %}
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'reservation' %}">Book</a>
-        </li>
+        <li class="nav-item"><a class="nav-link" href="{% url 'reservation' %}">Book</a></li>
+
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarMenu" role="button" data-toggle="dropdown"
+            <a class="nav-link dropdown-toggle" href="#" id="navbarMenu" role="button" data-toggle="dropdown"
             aria-haspopup="true" aria-expanded="false" aria-label="My account options">
             My Account
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarMenu">
-            <a class="dropdown-item" href="{% url 'reservation_list' %}" aria-label="The my bookings page">My
-              Reservations</a>
-            <a class="dropdown-item" href="{% url 'account_logout' %}" aria-label="The logout page">Logout</a>
-            {% else %}
-            <a class="nav-link" href="{% url 'account_signup' %}" aria-label="The register page">Register</a>
-            <a class="nav-link" href="{% url 'account_login' %}" aria-label="The login page">Login</a>
-            {% endif %}
-          </div>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarMenu">
+                <a class="dropdown-item" href="{% url 'reservation_list' %}" aria-label="The my bookings page">My
+                Reservations</a>
+                <a class="dropdown-item" href="{% url 'account_logout' %}" aria-label="The logout page">Logout</a>
+            </div>
         </li>
+        {% else %}
+        <li><a class="nav-link" href="{% url 'account_signup' %}" aria-label="The register page">Register</a></li>
+        <li><a class="nav-link" href="{% url 'account_login' %}" aria-label="The login page">Login</a></li>
+        {% endif %}
       </ul>
     </div>
   </nav>
