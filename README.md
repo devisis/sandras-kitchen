@@ -10,11 +10,9 @@ Sandra's Kitchen is a restaurant booking website aimed at providing a secure pla
 
 I used an agile methodology when planning the project via the use of projects and issues. The latter used to create user stories which formed the main guide when building the project.
 
-As I am supplying a webapp for a food company I decided to use dark colours to makeup the background. I decided upon a gradient as I found it gave the background subtle character and allowed the images and forms to pop. The dark gradient brings the content to life and makes it the main attraction.
-
 CRUD functionality is everything when it comes to this webapp as user interaction is paramount. The user creates a booking then the webapp provides feedback and allows the user to read all the bookings they have made. The user has the option to update the booking details and if they do so choose, delete any bookings.
 
-The webapp tries its best to elimnate user error with the implementation of validation. The user is unable to make two reservations for the same day which in turn elimnates the ability to duplicate bookings. The user is also forced to stick to constraints when selecting a time and date. 
+The webapp tries its best to eliminate user error with the implementation of validation. The user is unable to make two reservations for the same day which in turn eliminates the ability to duplicate bookings. The user is also forced to stick to constraints when selecting a time and date. 
 
 ## External User Goal
 
@@ -46,6 +44,7 @@ The customer wants to book a table at a restaurant.
 ## Database 
 
 ![Entity Relation Diagram]()
+
 ## Wireframes 
 
 #### Menu
@@ -68,8 +67,24 @@ The customer wants to book a table at a restaurant.
 ![Booking Desktop View](documentation/wireframes/reservation-desk.png)
 ![Booking Mobile View](documentation/wireframes/reservation-mob.png)
 
+
+
+
+# Design
+
 ## Color Scheme
 
+![Color scheme](documentation/features/color_scheme.png)
+
+As I am supplying a webapp for a food company I decided to use dark colours to makeup the background. I decided upon a gradient as I found it gave the background subtle character and allowed the images and forms to pop. The dark gradient brings the content to life and makes it the main attraction.
+
+
+
+## Font Choice
+
+I went on [google fonts](https://fonts.google.com/) and browsed through a selection of fonts. I used a variety of sample text to have visual comparison and settled on what I found to be a sleek font for the headings of my webpages and a tidy font for the data.
+
+![Font choice](documentation/features/font_choice.png)
 
 ## Features
 
@@ -103,7 +118,7 @@ The customer wants to book a table at a restaurant.
 - [GitHub](https://github.com/) was used for securely storing code.
 - [Gitpod](https://gitpod.io/) is the cloud based IDE.
 - Python3 is used for the main code logic.
-- [Django](https://www.djangoproject.com/) was used as the framework
+- [Django](https://www.djangoproject.com/) was used as the framework.
 - PostgreSQL was used for storing data.
 - [Cloudinary](https://cloudinary.com/) was used for storing static files.
 - [Heroku](https://heroku.com/) was used for live deployment.
@@ -115,20 +130,22 @@ The customer wants to book a table at a restaurant.
 
 To view all testing documentation please refer to [TESTING.md](TESTING.md)
 
-### Deployment
+## Deployment
 
-The site was deployed using [Heroku](https://heroku.com/). The app can be found using this link - [Mama's Kitchen](https://sandras-kitchen.herokuapp.com/).
+### Heroku
+
+The site was deployed using [Heroku](https://heroku.com/). The application can be found using this link - [Mama's Kitchen](https://sandras-kitchen.herokuapp.com/).
 
 The steps are as follows:
 
 - Log-in or Sign-up to Heroku.
-- From the Dashboard click "New" then "Create New App".
-- Enter a project name (unique), select a region then press "Create app".
-- This will create an app and open the deploy tab. From here select the "Settings" tab.
+- From the Dashboard click "New" then "Create New application".
+- Enter a project name (unique), select a region then press "Create application".
+- This will create an application and open the deploy tab. From here select the "Settings" tab.
 - Set your Environment Variables by navigating to Reveal Config Vars.
 Scroll up and head to the "Deploy" section to choose deployment method. Select "GitHub" and in the "connect to GitHub" section link your GitHub account.
 - Scroll down to the manual deploy option and select "Deploy Branch".
-- The app will now be built. Once completed a 'Your App Was Successfully Deployed' message and a link will appear.
+- The application will now be built. Once completed a 'Your application Was Successfully Deployed' message and a link will appear.
 
 ### Local Deployment
 
@@ -149,6 +166,18 @@ Additionally, Heroku will require a `Procfile`, so you can type:
 
 - `echo web: node index.js > Procfile`
 
-### Acknowledgements
+
+## Credits
+
+When stuck on code I spent a lot of time browsing online forums and documentations for the sites listed below.
+
+- Bootstrap docs were referred to when creating cards and the navbar.
+- Stackoverflow was used when it came to creating model forms and validating model forms. 
+- Django docs were used for pretty much every last piece of code as it was vital that I followed the specification.
+- Youtube was used for help with the creation of model forms.
+- Unsplashed was used for selecting unlicensed images.
+
+
+## Acknowledgements
 
 - Thank you to my mentor for help and support.

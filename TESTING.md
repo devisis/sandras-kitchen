@@ -6,13 +6,13 @@ To return to readme documentation please click here [README.md](README.md)
 
 ### As a user I want to book multiple seats.
 
-- A user has the option of entering a number themselves, or pressing the arrows situated to the right until they reach a number that suits them. As there are a limited amount of seats avaiable, if a user selects a number greater than this limit then an error is displayed.
+- A user has the option of entering a number themselves, or pressing the arrows situated to the right until they reach a number that suits them. As there are a limited amount of seats available, if a user selects a number greater than this limit then an error is displayed.
 
 ![Booking Seats](documentation/features/reservation_form_filled.png)
 
 ### As a user I want to book a specific date.
 
-- A user has the option of entering a date themselves, or selecting from the calender. As there are a limited amount of bookings avaiable, users are limited to one booking per day.
+- A user has the option of entering a date themselves, or selecting from the calender. As there are a limited amount of bookings available, users are limited to one booking per day.
 - Users are not allowed to book on the same day or a date that's in the past.
 
 ![Booking Date](documentation/features/reservation_form_filled.png)
@@ -92,11 +92,25 @@ I copied and pasted my css into the input section and checked my css. Everything
 
 ![Jigaw validation](documentation/testing/jigsaw_validation.png)
 
-## Browser Complatability
-chrome ff edge ss
+## Browser Compatibility
+
+I have navigated through the site using three main internet browsers, chrome, firefox and edge. I am yes to come across any compatibility issues.
+
+### Chrome
+
+![Chrome](documentation/testing/chrome.png)
+
+### Firefox 
+
+![Firefox](documentation/testing/firefox.png)
+
+### Edge
+
+![Edge](documentation/testing/edge.png)
 
 ## Browser Responsiveness
-- I used chrome developer settings to test the responsiveness of the site on 3 devices with varying sizes. Iphone 5, the Iphone12 and the Ipad Air.
+
+I used chrome developer settings to test the responsiveness of the site on 3 devices with varying sizes. Iphone 5, the Iphone12 and the Ipad Air.
 
 ### Iphone 5SE
 
@@ -110,8 +124,16 @@ chrome ff edge ss
 
 ![Ipad Air](documentation/testing/ipad_air.png)
 
-## Bug
-ss
+## Bugs
+
+
 ### Fixed Bug
 
+- Users were able to access parts of the site by using the url or back button when logged out.
+- Users were able to make a reservation for a past date.
+- Users were able to make a reservation for 0 seats.
+- Users were able to view, update and delete reservations made by all users.
+
 ### Unfixed Bug
+
+- Users are able to book for any time they want.
