@@ -67,9 +67,6 @@ The customer wants to book a table at a restaurant.
 ![Booking Desktop View](documentation/wireframes/reservation-desk.png)
 ![Booking Mobile View](documentation/wireframes/reservation-mob.png)
 
-
-
-
 # Design
 
 ## Color Scheme
@@ -77,8 +74,6 @@ The customer wants to book a table at a restaurant.
 ![Color scheme](documentation/features/color_scheme.png)
 
 As I am supplying a webapp for a food company I decided to use dark colours to makeup the background. I decided upon a gradient as I found it gave the background subtle character and allowed the images and forms to pop. The dark gradient brings the content to life and makes it the main attraction.
-
-
 
 ## Font Choice
 
@@ -111,6 +106,11 @@ I went on [google fonts](https://fonts.google.com/) and browsed through a select
 
 ### Update Reservation page
 ![Booking Page](documentation/features/update_reservation.png)
+
+### Future Features
+
+- Price displayed under each menu item
+- A opening and closing time as well as form validation to meet these limitations.
 
 ## Technologies Used
 
@@ -172,10 +172,18 @@ Additionally, Heroku will require a `Procfile`, so you can type:
 When stuck on code I spent a lot of time browsing online forums and documentations for the sites listed below.
 
 - Bootstrap docs were referred to when creating cards and the navbar.
-- Stackoverflow was used when it came to creating model forms and validating model forms. 
+    - https://getbootstrap.com/docs/5.2/components/navbar/#how-it-works
+    - https://getbootstrap.com/docs/5.2/components/card/#about
+- Stackoverflow was used when it came to validating model forms. 
+    - https://stackoverflow.com/questions/849142/how-to-limit-the-maximum-value-of-a-numeric-field-in-a-django-model
+    - https://stackoverflow.com/questions/60871630/login-required-decorator-on-a-class-based-view-in-django
+    - https://stackoverflow.com/questions/61076688/django-form-dateinput-with-widget-in-update-loosing-the-initial-value
 - Django docs were used for pretty much every last piece of code as it was vital that I followed the specification.
-- Youtube was used for help with the creation of model forms.
+    - https://docs.djangoproject.com/en/4.1/
+- Youtube was used for help with the creation of class based views.
+    - https://www.youtube.com/playlist?list=PLOLrQ9Pn6caxNb9eFZJ6LfY29nZkKmmXT
 - Unsplashed was used for selecting unlicensed images.
+    - https://unsplash.com/photos/ZgfMmFGGf-E
 
 
 ## Acknowledgements
