@@ -137,3 +137,5 @@ I used chrome developer settings to test the responsiveness of the site on 3 dev
 ### Unfixed Bug
 
 - Users are able to book for any time they want.
+- According to a test user the date-time function was buggy, as it was fine on my iOS it seems to be an Android issue.
+    - ![Test user booking bug](documentation/testing/test_user_booking.jpg)
