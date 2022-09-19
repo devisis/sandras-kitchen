@@ -92,6 +92,12 @@ I copied and pasted my css into the input section and checked my css. Everything
 
 ![Jigaw validation](documentation/testing/jigsaw_validation.png)
 
+### Python
+
+[PEP8](http://pep8online.com/)
+
+My code was copied and pasted into the pep8 checker to see if all of my code was pep8 complient. I had a few files which exceeded the length required but it was a quick fix.
+
 ## Browser Compatibility
 
 I have navigated through the site using three main internet browsers, chrome, firefox and edge. I am yes to come across any compatibility issues.

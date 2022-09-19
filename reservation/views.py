@@ -16,7 +16,8 @@ class AddReservationView(SuccessMessageMixin, CreateView):
     success_url = '/reservation/list/'
     success_message = 'Reservation created!'
 
-    # Set reservation user to current logged in user and ensure form is valid before save
+    # Set reservation user to current logged in user and ensure form is valid
+    # before save
     def form_valid(self, form):
         form.instance.user = self.request.user
         user = User.objects.get(username=self.request.user.username)
@@ -29,7 +30,10 @@ class AddReservationView(SuccessMessageMixin, CreateView):
                 error = True
 
         if error is True:
-            form.add_error('date', 'You have booked this day already. Try another date.')
+            form.add_error(
+                'date',
+                'You have booked this day already. Try another date.'
+                )
             return super(AddReservationView, self).form_invalid(form)
         else:
             self.object = form.save()
@@ -48,7 +52,9 @@ class ReservationListView(ListView):
         if self.request.user.is_superuser:
             context['current'] = Reservation.objects.all()
         else:
-            context['current'] = Reservation.objects.filter(user=self.request.user)
+            context['current'] = Reservation.objects.filter(
+                user=self.request.user
+                )
         return context
 
 

@@ -7,11 +7,14 @@ from django.core.exceptions import ValidationError
 
 class ReservationForm(ModelForm):
 
-    # compare user input with current date and raise error if in past or current
+    # compare user input with current date and raise error if in past or
+    # current
     def clean_date(self):
         date = self.cleaned_data['date']
         if date <= datetime.date.today():
-            raise ValidationError(message='Date cannot be in the past or today')
+            raise ValidationError(
+                message='Date cannot be in the past or today'
+                )
         return date
 
     class Meta:
@@ -39,7 +42,8 @@ class ReservationForm(ModelForm):
 
 
 class EditReservations(forms.ModelForm):
-    # compare user input with current date and raise error if in past or current
+    # compare user input with current date and raise error if in past or
+    # current
     def clean_date(self):
         date = self.cleaned_data['date']
         if date <= datetime.date.today():
